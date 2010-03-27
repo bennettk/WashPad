@@ -20,7 +20,8 @@
 		C12B5CF5115DC01C00D23932 /* swipe_up.wav in Resources */ = {isa = PBXBuildFile; fileRef = C12B5CF1115DC01C00D23932 /* swipe_up.wav */; };
 		C12B5CF6115DC01C00D23932 /* tap.wav in Resources */ = {isa = PBXBuildFile; fileRef = C12B5CF2115DC01C00D23932 /* tap.wav */; };
 		C12B5CF7115DC01C00D23932 /* wood_tap.wav in Resources */ = {isa = PBXBuildFile; fileRef = C12B5CF3115DC01C00D23932 /* wood_tap.wav */; };
-		C19DEDA5115DA5DC002D432C /* washboard.png in Resources */ = {isa = PBXBuildFile; fileRef = C19DEDA4115DA5DC002D432C /* washboard.png */; };
+		C12B5D0D115DC87800D23932 /* washpad.png in Resources */ = {isa = PBXBuildFile; fileRef = C12B5D0C115DC87800D23932 /* washpad.png */; };
+		C12B5D38115E358A00D23932 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C12B5D37115E358A00D23932 /* Icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +43,8 @@
 		C12B5CF1115DC01C00D23932 /* swipe_up.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = swipe_up.wav; path = Resources/sounds/swipe_up.wav; sourceTree = "<group>"; };
 		C12B5CF2115DC01C00D23932 /* tap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = tap.wav; path = Resources/sounds/tap.wav; sourceTree = "<group>"; };
 		C12B5CF3115DC01C00D23932 /* wood_tap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = wood_tap.wav; path = Resources/sounds/wood_tap.wav; sourceTree = "<group>"; };
-		C19DEDA4115DA5DC002D432C /* washboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = washboard.png; sourceTree = "<group>"; };
+		C12B5D0C115DC87800D23932 /* washpad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = washpad.png; sourceTree = "<group>"; };
+		C12B5D37115E358A00D23932 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				C12B5D37115E358A00D23932 /* Icon.png */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources-iPad */,
@@ -103,8 +106,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources-iPad */ = {
 			isa = PBXGroup;
 			children = (
+				C12B5D0C115DC87800D23932 /* washpad.png */,
 				C12B5CAD115DADBF00D23932 /* sounds */,
-				C19DEDA4115DA5DC002D432C /* washboard.png */,
 				2899E5210DE3E06400AC0155 /* WashPadViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* WashPad-Info.plist */,
@@ -178,11 +181,12 @@
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				2899E5220DE3E06400AC0155 /* WashPadViewController.xib in Resources */,
-				C19DEDA5115DA5DC002D432C /* washboard.png in Resources */,
 				C12B5CF4115DC01C00D23932 /* swipe_down.wav in Resources */,
 				C12B5CF5115DC01C00D23932 /* swipe_up.wav in Resources */,
 				C12B5CF6115DC01C00D23932 /* tap.wav in Resources */,
 				C12B5CF7115DC01C00D23932 /* wood_tap.wav in Resources */,
+				C12B5D0D115DC87800D23932 /* washpad.png in Resources */,
+				C12B5D38115E358A00D23932 /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,7 @@
 
 @implementation WashPadViewController
 
+@synthesize woodView, washboardView, woodTapRecognizer, boardTapRecognizer, swipeUpRecognizer, swipeDownRecognizer;
 
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -60,55 +61,27 @@
      Create a tap recognizer and add it to the view.
      Keep a reference to the recognizer to test in gestureRecognizer:shouldReceiveTouch:.
      */
-	//recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapFrom:)];
-//	[self.view addGestureRecognizer:recognizer];
-//    self.tapRecognizer = (UITapGestureRecognizer *)recognizer;
-//    recognizer.delegate = self;
-//	[recognizer release];
-//	
-//    /*
-//     Create a swipe gesture recognizer to recognize right swipes (the default).
-//     We're only interested in receiving messages from this recognizer, and the view will take ownership of it, so we don't need to keep a reference to it.
-//     */
-//	recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
-//	[self.view addGestureRecognizer:recognizer];
-//	[recognizer release];
-//	
-//    /*
-//     Create a swipe gesture recognizer to recognize left swipes.
-//     Keep a reference to the recognizer so that it can be added to and removed from the view in takeLeftSwipeRecognitionEnabledFrom:.
-//     Add the recognizer to the view if the segmented control shows that left swipe recognition is allowed.
-//     */
-//	recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
-//	self.swipeLeftRecognizer = (UISwipeGestureRecognizer *)recognizer;
-//    swipeLeftRecognizer.direction = UISwipeGestureRecognizerDirectionDown;
-//    
-//    if ([segmentedControl selectedSegmentIndex] == 0) {
-//        [self.view addGestureRecognizer:swipeLeftRecognizer];
-//    }
-//    self.swipeLeftRecognizer = (UISwipeGestureRecognizer *)recognizer;
-//	[recognizer release];
-//	
-//    /*
-//     Create a rotation gesture recognizer.
-//     We're only interested in receiving messages from this recognizer, and the view will take ownership of it, so we don't need to keep a reference to it.
-//     */
-//	recognizer = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(handleRotationFrom:)];
-//	[self.view addGestureRecognizer:recognizer];
-//	[recognizer release];
-//    
-//    // For illustrative purposes, set exclusive touch for the segmented control (see the ReadMe).
-//    [segmentedControl setExclusiveTouch:YES];
-//    
-//    /*
-//     Create an image view to display the gesture description.
-//     */
-//    UIImageView *anImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0.0, 0.0, 300.0, 75.0)];
-//    anImageView.contentMode = UIViewContentModeCenter;
-//    self.imageView = anImageView;
-//    [anImageView release];
-//    [self.view addSubview:imageView];
+	recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleWoodTapFrom:)];
+	[woodView addGestureRecognizer:recognizer];
+    self.woodTapRecognizer = (UITapGestureRecognizer *)recognizer;
+	[recognizer release];
+
+	recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleBoardTapFrom:)];
+	[washboardView addGestureRecognizer:recognizer];
+    self.boardTapRecognizer = (UITapGestureRecognizer *)recognizer;
+	[recognizer release];
+
+	recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeDownFrom:)];
+	self.swipeDownRecognizer = (UISwipeGestureRecognizer *)recognizer;
+	swipeDownRecognizer.direction = UISwipeGestureRecognizerDirectionDown;
+	[self.washboardView addGestureRecognizer:recognizer];
+	[recognizer release];
 	
+	recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeUpFrom:)];
+	self.swipeUpRecognizer = (UISwipeGestureRecognizer *)recognizer;
+	swipeUpRecognizer.direction = UISwipeGestureRecognizerDirectionUp;
+	[self.washboardView addGestureRecognizer:recognizer];
+	[recognizer release];
 }
 
 
@@ -129,6 +102,22 @@
 	// e.g. self.myOutlet = nil;
 }
 
+#pragma mark gesture handlers
+- (void)handleWoodTapFrom:(UITapGestureRecognizer *)recognizer {
+	[woodTapPlayer play];
+}
+
+-(void)handleBoardTapFrom:(UITapGestureRecognizer *)recognizer {
+	[tapPlayer play];
+}
+
+-(void)handleSwipeDownFrom:(UITapGestureRecognizer *)recognizer {
+	[swipeDownPlayer play];
+}
+
+-(void)handleSwipeUpFrom:(UITapGestureRecognizer *)recognizer {
+	[swipeUpPlayer play];
+}
 
 - (void)dealloc {
     [super dealloc];

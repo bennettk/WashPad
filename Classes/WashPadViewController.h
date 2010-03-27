@@ -9,9 +9,26 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface WashPadViewController : UIViewController {
+@interface WashPadViewController : UIViewController <UIGestureRecognizerDelegate> {
+	IBOutlet UIView *woodView;
+	IBOutlet UIView *washboardView;
+	
+	UITapGestureRecognizer *woodTapRecognizer;
+	UITapGestureRecognizer *boardTapRecognizer;
+	UISwipeGestureRecognizer *swipeUpRecognizer;
+	UISwipeGestureRecognizer *swipeDownRecognizer;
+	
 	AVAudioPlayer *tapPlayer, *swipeDownPlayer, *swipeUpPlayer, *woodTapPlayer;
 }
+
+@property (nonatomic, retain) IBOutlet UIView *woodView;
+@property (nonatomic, retain) IBOutlet UIView *washboardView;
+
+@property (nonatomic, retain) UITapGestureRecognizer *woodTapRecognizer;
+@property (nonatomic, retain) UITapGestureRecognizer *boardTapRecognizer;
+@property (nonatomic, retain) UISwipeGestureRecognizer *swipeUpRecognizer;
+@property (nonatomic, retain) UISwipeGestureRecognizer *swipeDownRecognizer;
+
 
 @end
 
