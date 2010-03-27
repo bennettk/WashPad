@@ -120,6 +120,17 @@
 }
 
 - (void)dealloc {
+	[woodTapPlayer release];
+	[tapPlayer release];
+	[swipeDownPlayer release];
+	[swipeUpPlayer release];
+	[woodView release];
+	[washboardView release];
+	[woodTapRecognizer release];
+	[boardTapRecognizer release];
+	[swipeUpRecognizer release];
+	[swipeDownRecognizer release];
+
     [super dealloc];
 }
 
