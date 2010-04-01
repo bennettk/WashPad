@@ -3,4 +3,6 @@
 
 ## never be caught unprepared for an impromptu backwoods jam again!
 
-since this was rejected by Apple for being too 'limited in functionality' for the iPad store, I figured I'd share it with the world as a (admittedly very simple) means of learning about the new gesture recognizers and basic audio playback on the iPhone.  
+since this was rejected by Apple for being too 'limited in functionality' for the iPad store, I figured I'd share it with the world as a means of learning about the new gesture recognizers and basic audio playback on the iPhone. have a look at WashPadViewController for the good stuff.  and if you're going to use the AVAudioPlayer (or AVAudioRecorder) in your own app, make sure to add the AVFoundation framework to your app.
+
+enjoy. and if you happen to use this app in a recreation of [The State's *Froggy Jamboree*](http://www.mtv.com/videos/misc/400383/froggy-jamboree.jhtml) and send a video of it to [washpad@bennettk.com](mailto:washpad@bennettk.com), I will buy you a beer.
