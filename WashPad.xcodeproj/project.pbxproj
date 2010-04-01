@@ -22,6 +22,7 @@
 		C12B5CF7115DC01C00D23932 /* wood_tap.wav in Resources */ = {isa = PBXBuildFile; fileRef = C12B5CF3115DC01C00D23932 /* wood_tap.wav */; };
 		C12B5D0D115DC87800D23932 /* washpad.png in Resources */ = {isa = PBXBuildFile; fileRef = C12B5D0C115DC87800D23932 /* washpad.png */; };
 		C12B5D38115E358A00D23932 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C12B5D37115E358A00D23932 /* Icon.png */; };
+		C1B549B4115E43230082A552 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = C1B549B3115E43230082A552 /* Entitlements.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		C12B5CF3115DC01C00D23932 /* wood_tap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = wood_tap.wav; path = Resources/sounds/wood_tap.wav; sourceTree = "<group>"; };
 		C12B5D0C115DC87800D23932 /* washpad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = washpad.png; sourceTree = "<group>"; };
 		C12B5D37115E358A00D23932 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		C1B549B3115E43230082A552 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				29B97317FDCFA39411CA2CEA /* Resources-iPad */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				C1B549B3115E43230082A552 /* Entitlements.plist */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				C12B5CF7115DC01C00D23932 /* wood_tap.wav in Resources */,
 				C12B5D0D115DC87800D23932 /* washpad.png in Resources */,
 				C12B5D38115E358A00D23932 /* Icon.png in Resources */,
+				C1B549B4115E43230082A552 /* Entitlements.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +266,36 @@
 			};
 			name = Release;
 		};
+		C1B549A4115E42800082A552 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Bennett Kolasinski";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4ABE85B1-9E7B-4A16-938E-7F11F25AED7E";
+				SDKROOT = iphoneos3.2;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Distribution;
+		};
+		C1B549A5115E42800082A552 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = WashPad_Prefix.pch;
+				INFOPLIST_FILE = "WashPad-Info.plist";
+				PRODUCT_NAME = WashPad;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Distribution;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -270,6 +304,7 @@
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
 				1D6058950D05DD3E006BFB54 /* Release */,
+				C1B549A5115E42800082A552 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -279,6 +314,7 @@
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
 				C01FCF5008A954540054247B /* Release */,
+				C1B549A4115E42800082A552 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

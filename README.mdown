@@ -1,0 +1,6 @@
+# Washpad
+## [washpad.bennettk.com](http://washpad.bennettk.com)
+
+## never be caught unprepared for an impromptu backwoods jam again!
+
+since this was rejected by Apple for being too 'limited in functionality' for the iPad store, I figured I'd share it with the world as a (admittedly very simple) means of learning about the new gesture recognizers and basic audio playback on the iPhone.  
